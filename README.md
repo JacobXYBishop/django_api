@@ -85,11 +85,10 @@ rest_dailycompleteness
 
 ##### notes
 
-1. the connector of Django framework and REST framework is ../rest_completeness/urls.py and ../urls.py;
+1. the connector of Django framework and REST framework is `../rest_completeness/urls.py` and `../urls.py`;
 
-1. ../urls.py uses `include` to import urls you written in ../rest_completeness
+1. `../urls.py` uses `include` to import urls you written in `../rest_completeness`
 
-1. 
 
 ### GraphQL API
 
@@ -114,13 +113,13 @@ rest_dailycompleteness
     }
     ```
 
-1. the connector of Django framework and GQL framework is ../gql_models/schema.py, ../schema.py and ../urls.py
+1. the connector of Django framework and GQL framework is `../gql_models/schema.py`, `../schema.py` and `../urls.py`
 
-1. ../schema.py import all schemas no matter how many gql api you have
+1. `../schema.py` import all schemas no matter how many gql api you have
 
 
 ### Last
 
 1. every time you add an API you always have to add it into setting.py INSTALLED_APPS
 
-1. I wrote some functions in ../utils.py to make things easier, feel free to modify it
+1. I wrote some functions in `../utils.py` to make things easier, feel free to modify it
