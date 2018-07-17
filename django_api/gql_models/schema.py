@@ -13,7 +13,7 @@ _logger = logging.getLogger(__name__)
 
 
 class ModelsAllStatsQuery(graphene.ObjectType):
-    toy_models_all_stats = graphene.Field(
+    models_all_stats = graphene.Field(
         type=graphene.List(ModelsAllStats),
         description='模型统计信息',
         symbols=graphene.Argument(graphene.List(graphene.String), required=True, description='代码'),
@@ -22,7 +22,7 @@ class ModelsAllStatsQuery(graphene.ObjectType):
 
 
 class ModelsAllDetailQuery(graphene.ObjectType):
-    toy_models_all_detail = graphene.Field(
+    models_all_detail = graphene.Field(
         type=graphene.List(ModelsAllDetail),
         description='模型详细信息',
         symbols=graphene.Argument(graphene.List(graphene.String), required=True, description='代码'),

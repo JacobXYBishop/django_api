@@ -8,7 +8,7 @@ from functools import partial
 from rest_framework.response import Response
 from influxdb import DataFrameClient
 
-__INFLUX = DataFrameClient('10.144.64.68', 8086, 'trading', '123456', 'trading')
+__INFLUX = DataFrameClient('10.144.64.85', 8086, 'trading', '123456', 'trading')
 
 
 def _date2timestamp(date):
