@@ -122,4 +122,6 @@ rest_dailycompleteness
 
 1. every time you add an API you always have to add it into setting.py INSTALLED_APPS
 
+1. rest_completeness used InfluxDB and gql models used PostgresDB 
+
 1. I wrote some functions in `../utils.py` to make things easier, feel free to modify it

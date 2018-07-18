@@ -22,27 +22,15 @@ def resolve_all_detail(obj, info, **kwargs):
     :return:
     """
     symbols = ','.join(kwargs.get('symbols'))
+    selections = ','.join(kwargs.get('_projections'))
 
     return pd.read_sql(
         """
         SELECT
-        date,
-        symbol,
-        open,
-        high,
-        low,
-        close,
-        change_rate,
-        upper,
-        middle,
-        lower,
-        signal,
-        position,
-        capital_return,
-        capital
+        {}
         FROM signal_boll
         WHERE symbol in ('{}')
-        """.format(symbols),
+        """.format(selections, symbols),
         __ENGINE
     )
 
@@ -57,28 +45,14 @@ def resolve_all_stats(obg, info, **kwargs):
     :return:
     """
     symbols = ','.join(kwargs.get('symbols'))
+    selections = ','.join(kwargs.get('_projections'))
 
     return pd.read_sql(
         """
         SELECT
-        symbol,
-        annual_return,
-        cumulative_returns,
-        annual_volatility,
-        sharpe_ratio,
-        calmar_ratio,
-        stability,
-        max_drawdown,
-        omega_ratio,
-        sortino_ratio,
-        skew,
-        kurtosis,
-        tail_ratio,
-        daily_value_at_risk,
-        alpha,
-        beta
+        {}
         FROM signal_boll_stats
         WHERE symbol in ('{}')
-        """.format(symbols),
+        """.format(selections, symbols),
         __ENGINE
     )

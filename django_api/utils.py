@@ -82,7 +82,7 @@ def handle_resolver(model):
 
             _apply_func = partial(_to_object, model=model, _projections=_projections)
 
-            func_return = func(obj, info, **kwargs)
+            func_return = func(obj, info, _projections=_projections, **kwargs)
 
             if isinstance(func_return, pd.DataFrame):
                 return func_return.apply(_apply_func, axis=1).tolist()
